@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect20_white">
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/navigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/h28"
+        android:layout_marginLeft="@dimen/w20"/>
+    <TextView
+        android:id="@+id/privacy_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="プライバシーポリシー / Privacy Policy"
+        android:textColor="@color/black_191a32"
+        android:textSize="@dimen/font_16"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/h70"
+        app:layout_constraintTop_toTopOf="@+id/iv_back"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_back" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/h120"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back">
+
+        <WebView
+            android:id="@+id/privacy_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
